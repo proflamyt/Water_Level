@@ -11,6 +11,8 @@
 int trig = A0;
 int echo = A1;
 
+// 48 base
+
 AF_DCMotor motor(3);
 
 // Number of inputs to the fuzzy inference system
@@ -96,7 +98,6 @@ void loop()
 }
 
 
-
 //***********************************************************************
 // Support functions for Fuzzy Inference System                          
 //***********************************************************************
@@ -157,9 +158,9 @@ int fis_gIMFCount[] = { 3 };
 int fis_gOMFCount[] = { 3 };
 
 // Coefficients for the Input Member Functions
-FIS_TYPE fis_gMFI0Coeff1[] = { -43.2, 0, 43.2 };
-FIS_TYPE fis_gMFI0Coeff2[] = { 10.8, 54, 97.2 };
-FIS_TYPE fis_gMFI0Coeff3[] = { 64.8, 108, 151.2 };
+FIS_TYPE fis_gMFI0Coeff1[] = { 40.8, 60, 79.2 };
+FIS_TYPE fis_gMFI0Coeff2[] = { 64.8, 84, 103.2 };
+FIS_TYPE fis_gMFI0Coeff3[] = { 88.8, 108, 127.2 };
 FIS_TYPE* fis_gMFI0Coeff[] = { fis_gMFI0Coeff1, fis_gMFI0Coeff2, fis_gMFI0Coeff3 };
 FIS_TYPE** fis_gMFICoeff[] = { fis_gMFI0Coeff };
 
@@ -197,7 +198,7 @@ int fis_gRO2[] = { 1 };
 int* fis_gRO[] = { fis_gRO0, fis_gRO1, fis_gRO2 };
 
 // Input range Min
-FIS_TYPE fis_gIMin[] = { 0 };
+FIS_TYPE fis_gIMin[] = { 60 };
 
 // Input range Max
 FIS_TYPE fis_gIMax[] = { 108 };

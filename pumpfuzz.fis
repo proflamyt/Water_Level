@@ -13,11 +13,11 @@ DefuzzMethod='centroid'
 
 [Input1]
 Name='water_level'
-Range=[0 108]
+Range=[60 108]
 NumMFs=3
-MF1='low':'trimf',[-43.2 0 43.2]
-MF2='mid':'trimf',[10.8 54 97.2]
-MF3='full':'trimf',[64.8 108 151.2]
+MF1='low':'trimf',[40.8 60 79.2]
+MF2='mid':'trimf',[64.8 84 103.2]
+MF3='full':'trimf',[88.8 108 127.2]
 
 [Output1]
 Name='pump_rate'
